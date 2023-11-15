@@ -1,4 +1,4 @@
-const Onboarding = () => {
+const Page = () => {
   return (
     <main>
       <h1 className="head-text">Onboarding</h1>
@@ -6,4 +6,4 @@ const Onboarding = () => {
   );
 };
 
-export default Onboarding;
+export default Page;
