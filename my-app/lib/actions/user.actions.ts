@@ -1,3 +1,7 @@
 "use server";
 
-export async function updateUser(): Promise<void> {}
+import { connectToDB } from "../mongoose";
+
+export async function updateUser(): Promise<void> {
+  connectToDB();
+}
