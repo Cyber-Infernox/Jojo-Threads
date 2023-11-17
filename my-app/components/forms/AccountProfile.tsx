@@ -23,7 +23,7 @@ import { useUploadThing } from "@/lib/uploadthing";
 import { isBase64Image } from "@/lib/utils";
 
 import { UserValidation } from "@/lib/validations/user";
-// import { updateUser } from "@/lib/actions/user.actions";
+import { updateUser } from "@/lib/actions/user.actions";
 
 // For typescript
 interface Props {
@@ -39,8 +39,8 @@ interface Props {
 }
 
 const AccountProfile = ({ user, btnTitle }: Props) => {
-  //   const router = useRouter();
-  //   const pathname = usePathname();
+  const router = useRouter();
+  const pathname = usePathname();
   const { startUpload } = useUploadThing("media");
 
   const [files, setFiles] = useState<File[]>([]);
@@ -69,21 +69,21 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
       }
     }
 
-    // Backend updation of the values submitted by the form
-    // await updateUser({
-    //   name: values.name,
-    //   path: pathname,
-    //   username: values.username,
-    //   userId: user.id,
-    //   bio: values.bio,
-    //   image: values.profile_photo,
-    // });
+    // Server updation of the values submitted by the form
+    await updateUser({
+      name: values.name,
+      path: pathname,
+      username: values.username,
+      userId: user.id,
+      bio: values.bio,
+      image: values.profile_photo,
+    });
 
-    // if (pathname === "/profile/edit") {
-    //   router.back();
-    // } else {
-    //   router.push("/");
-    // }
+    if (pathname === "/profile/edit") {
+      router.back();
+    } else {
+      router.push("/");
+    }
   };
 
   // File updation in react hook form
