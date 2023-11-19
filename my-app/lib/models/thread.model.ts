@@ -6,12 +6,13 @@ const threadSchema = new mongoose.Schema({
     required: true,
   },
   author: {
-    type: mongoose.Schema.Types.ObjectId, // This type refers to id of object (Will store another user id)
+    // In Mongoose, mongoose.Schema.Types.ObjectId is a specific data type used to define a schema property that will hold a reference to another document in a different collection within a MongoDB database.
+    type: mongoose.Schema.Types.ObjectId,
     ref: "User",
     required: true,
   },
   community: {
-    type: mongoose.Schema.Types.ObjectId, // Stores another community id
+    type: mongoose.Schema.Types.ObjectId,
     ref: "Community",
   },
   createdAt: {
@@ -23,7 +24,7 @@ const threadSchema = new mongoose.Schema({
   },
   children: [
     {
-      type: mongoose.Schema.Types.ObjectId, // Stores another thread id
+      type: mongoose.Schema.Types.ObjectId,
       ref: "Thread", // One thread can have more than one threads (Recursion of threads)
     },
   ],

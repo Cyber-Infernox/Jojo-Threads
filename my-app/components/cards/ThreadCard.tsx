@@ -125,7 +125,7 @@ function ThreadCard({
         /> */}
       </div>
 
-      {!isComment && comments.length > 0 && (
+      {/* {!isComment && comments.length > 0 && (
         <div className="ml-1 mt-3 flex items-center gap-2">
           {comments.slice(0, 2).map((comment, index) => (
             <Image
@@ -144,7 +144,7 @@ function ThreadCard({
             </p>
           </Link>
         </div>
-      )}
+      )} */}
 
       {!isComment && community && (
         <Link
@@ -156,13 +156,13 @@ function ThreadCard({
             {community && ` - ${community.name} Community`}
           </p>
 
-          <Image
+          {/* <Image
             src={community.image}
             alt={community.name}
             width={14}
             height={14}
             className="ml-1 rounded-full object-cover"
-          />
+          /> */}
         </Link>
       )}
     </article>
