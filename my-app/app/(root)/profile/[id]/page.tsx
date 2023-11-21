@@ -50,7 +50,7 @@ async function Page({ params }: { params: { id: string } }) {
               </TabsTrigger>
             ))}
           </TabsList>
-          {/* {profileTabs.map((tab) => (
+          {profileTabs.map((tab) => (
             <TabsContent
               key={`content-${tab.label}`}
               value={tab.value}
@@ -62,7 +62,7 @@ async function Page({ params }: { params: { id: string } }) {
                 accountType="User"
               />
             </TabsContent>
-          ))} */}
+          ))}
         </Tabs>
       </div>
     </section>
