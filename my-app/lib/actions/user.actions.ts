@@ -59,7 +59,7 @@ export async function fetchUserPosts(userId: string) {
   try {
     connectToDB();
 
-    // Find all threads authored by the given user id
+    // Find all threads authored by the given user id.
     const threads = await User.findOne({ id: userId }).populate({
       path: "threads",
       model: Thread,
