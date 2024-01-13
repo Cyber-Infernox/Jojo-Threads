@@ -1,4 +1,9 @@
-import { OrganizationSwitcher, SignOutButton, SignedIn } from "@clerk/nextjs";
+import {
+  UserButton,
+  OrganizationSwitcher,
+  SignOutButton,
+  SignedIn,
+} from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import Image from "next/image";
 import Link from "next/link";
@@ -27,6 +32,8 @@ const Topbar = () => {
             </SignOutButton>
           </SignedIn>
         </div>
+
+        <UserButton afterSignOutUrl="/" />
 
         {/* OrgansationSwitcher is another thing from clerk */}
         <OrganizationSwitcher
