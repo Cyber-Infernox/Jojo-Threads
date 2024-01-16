@@ -33,8 +33,6 @@ const Topbar = () => {
           </SignedIn>
         </div>
 
-        <UserButton afterSignOutUrl="/" />
-
         {/* OrgansationSwitcher is another thing from clerk */}
         <OrganizationSwitcher
           appearance={{
@@ -44,6 +42,15 @@ const Topbar = () => {
             },
           }}
         />
+
+        <div className="ml-[17px]">
+          <UserButton
+            appearance={{
+              baseTheme: dark,
+            }}
+            afterSignOutUrl="/"
+          />
+        </div>
       </div>
     </nav>
   );

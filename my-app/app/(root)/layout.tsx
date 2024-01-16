@@ -11,6 +11,7 @@ import Bottombar from "@/components/shared/Bottombar";
 import "../globals.css";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
+import { dark } from "@clerk/themes";
 
 export const metadata: Metadata = {
   title: "Threads",
@@ -23,7 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark,
+      }}
+    >
       <html lang="en">
         <body className={inter.className}>
           <Topbar />
