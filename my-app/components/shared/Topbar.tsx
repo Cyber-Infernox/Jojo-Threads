@@ -5,8 +5,8 @@ import {
   SignedIn,
 } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
 const Topbar = () => {
   return (
