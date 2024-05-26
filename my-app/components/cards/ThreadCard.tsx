@@ -49,12 +49,13 @@ function ThreadCard({
         <div className="flex w-full flex-1 flex-row gap-4">
           <div className="flex flex-col items-center">
             <Link href={`/profile/${author.id}`} className="relative h-11 w-11">
-              {/* <Image
+              <Image
                 src={author.image}
                 alt="user_community_image"
-                fill
+                width={1000}
+                height={1000}
                 className="cursor-pointer rounded-full"
-              /> */}
+              />
             </Link>
 
             <div className="thread-card_bar" />
@@ -156,13 +157,13 @@ function ThreadCard({
             {community && ` - ${community.name} Community`}
           </p>
 
-          {/* <Image
+          <Image
             src={community.image}
             alt={community.name}
             width={14}
             height={14}
             className="ml-1 rounded-full object-cover"
-          /> */}
+          />
         </Link>
       )}
     </article>
