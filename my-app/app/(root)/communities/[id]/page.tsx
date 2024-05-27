@@ -33,13 +33,13 @@ async function Page({ params }: { params: { id: string } }) {
           <TabsList className="tab">
             {communityTabs.map((tab) => (
               <TabsTrigger key={tab.label} value={tab.value} className="tab">
-                {/* <Image
+                <Image
                   src={tab.icon}
                   alt={tab.label}
                   width={24}
                   height={24}
                   className="object-contain"
-                /> */}
+                />
                 <p className="max-sm:hidden">{tab.label}</p>
 
                 {tab.label === "Threads" && (
@@ -52,7 +52,6 @@ async function Page({ params }: { params: { id: string } }) {
           </TabsList>
 
           <TabsContent value="threads" className="w-full text-light-1">
-            {/* @ts-ignore */}
             <ThreadsTab
               currentUserId={user.id}
               accountId={communityDetails._id}
@@ -75,14 +74,13 @@ async function Page({ params }: { params: { id: string } }) {
             </section>
           </TabsContent>
 
-          <TabsContent value="requests" className="w-full text-light-1">
-            {/* @ts-ignore */}
+          {/* <TabsContent value="requests" className="w-full text-light-1">
             <ThreadsTab
               currentUserId={user.id}
               accountId={communityDetails._id}
               accountType="Community"
             />
-          </TabsContent>
+          </TabsContent> */}
         </Tabs>
       </div>
     </section>

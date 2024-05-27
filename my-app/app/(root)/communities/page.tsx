@@ -25,8 +25,6 @@ async function Page({
     pageSize: 25,
   });
 
-  // console.log(result);
-
   return (
     <>
       <h1 className="head-text">Communities</h1>
