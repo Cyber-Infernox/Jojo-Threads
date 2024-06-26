@@ -8,9 +8,10 @@ Threads is a lightweight, user-friendly messaging application designed for seaml
 
 - **Threaded Conversations**: Organize messages into threads for easy tracking and navigation.
 - **Real-time Messaging**: Enjoy instant communication with real-time message updates.
-- **User Profiles**: Customize your profile with personal information and avatar.
-- **Notifications**: Stay updated with push notifications for new messages and mentions.
-- **Search Functionality**: Quickly find specific messages or threads.
+- **User Profiles**: Customize your profile with personal information and profile picture.
+- **Notifications**: Stay updated with push notifications for new messages replies.
+- **Search Functionality**: Quickly find other users by their name or username.
+- **Collaboration**: Create or join communities to chat with like minded people.
 
 ## Project Structure
 
