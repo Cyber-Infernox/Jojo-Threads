@@ -36,7 +36,7 @@ This repository contains the code for the Jojo-Threads project.
    Open an empty folder where you want to clone the repository
 
    ```sh
-   git clone https://github.com/Cyber-Infernox/Jojo-Pixels.git
+   git clone https://github.com/Cyber-Infernox/Jojo-Threads.git
    cd Jojo-Threads
    cd my-app
 
